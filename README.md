@@ -92,4 +92,4 @@ I'm currently exploring Frontend and React opportunities.
 
 - LinkedIn: www.linkedin.com/in/shivangiviradiya
 - GitHub: https://github.com/shivangi-viradiya
-- Portfolio: https://shivangi-portfolio-one.vercel.app/
+- Portfolio: https://shivangi-frontend.vercel.app/
