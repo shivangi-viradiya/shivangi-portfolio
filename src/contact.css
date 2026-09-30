@@ -1,0 +1,248 @@
+/* 06 / CONTACT */
+.contact-section {
+    position: relative;
+    padding: 120px 6% 40px;
+    background: #030303;
+    color: #ffffff;
+    overflow: hidden;
+}
+
+/* SECTION LABEL */
+.contact-section .section-label {
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    margin: 0 0 70px;
+    padding: 8px 14px;
+    color: #35a7ff;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    border: 1px solid rgba(53, 167, 255, 0.35);
+    border-radius: 999px;
+    background: rgba(53, 167, 255, 0.06);
+    box-shadow:
+        0 0 20px rgba(53, 167, 255, 0.08);
+    text-shadow:
+        0 0 12px rgba(53, 167, 255, 0.4);
+}
+
+/* MAIN HEADER */
+.contact-header {
+    display: grid;
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: end;
+    gap: 80px;
+    max-width: 1400px;
+    margin: 0 auto 110px;
+}
+
+/* BIG TITLE */
+.contact-title {
+    margin: 0;
+    font-size: clamp(55px, 7.5vw, 110px);
+    line-height: 0.88;
+    font-weight: 700;
+    letter-spacing: -6px;
+}
+
+/* RIGHT INTRO */
+.contact-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.contact-intro p {
+    max-width: 430px;
+    margin: 0;
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+/* LET'S TALK BUTTON */
+.contact-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 150px;
+    height: 150px;
+    background: #35a7ff;
+    color: #030303;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.contact-cta span {
+    font-size: 18px;
+    transition: transform 0.3s ease;
+}
+
+.contact-cta:hover {
+    transform: scale(1.06);
+    box-shadow:
+        0 0 40px rgba(53, 167, 255, 0.25);
+}
+
+.contact-cta:hover span {
+    transform: translate(4px, -4px);
+}
+
+/* CONTACT DETAILS */
+.contact-details {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 45px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+/* INDIVIDUAL DETAIL */
+.contact-detail {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.contact-detail-label {
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 9px;
+    letter-spacing: 3px;
+}
+
+.contact-detail a {
+    width: fit-content;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.contact-detail a:hover {
+    color: #35a7ff;
+    transform: translateX(4px);
+}
+
+/* BOTTOM FOOTER */
+.contact-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding-top: 35px;
+}
+
+.contact-footer p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.35);
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.contact-footer p:first-child {
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 11px;
+}
+
+/* DECORATIVE BACKGROUND GLOW */
+.contact-section::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    right: -250px;
+    top: 100px;
+    background: rgba(53, 167, 255, 0.08);
+    border-radius: 50%;
+    filter: blur(120px);
+    pointer-events: none;
+}
+
+/* TABLET */
+@media (max-width: 1000px) {
+    .contact-header {
+        grid-template-columns: 1fr 0.6fr;
+        gap: 50px;
+    }
+
+    .contact-title {
+        font-size: clamp(55px, 8vw, 85px);
+        letter-spacing: -5px;
+    }
+
+    .contact-details {
+        grid-template-columns: 1.5fr 1fr 1fr;
+        gap: 30px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 90px 20px 30px;
+    }
+
+    .contact-section .section-label {
+        margin-bottom: 45px;
+    }
+
+    /* main content becomes one column */
+    .contact-header {
+        display: block;
+        margin-bottom: 80px;
+    }
+
+    /* title */
+    .contact-title {
+        font-size: clamp(48px, 14vw, 70px);
+        line-height: 0.92;
+        letter-spacing: -4px;
+    }
+
+    /* intro */
+    .contact-intro {
+        margin-top: 45px;
+        gap: 35px;
+    }
+
+    .contact-intro p {
+        max-width: 100%;
+    }
+
+    /* CTA */
+    .contact-cta {
+        width: 125px;
+        height: 125px;
+    }
+
+    /* contact details */
+    .contact-details {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 40px 0;
+    }
+
+    /* footer */
+    .contact-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        padding-top: 30px;
+    }
+}

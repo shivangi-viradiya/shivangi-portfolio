@@ -1,0 +1,122 @@
+/* HEADER */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 22px 6%;
+  box-sizing: border-box;
+  background: rgba(3, 3, 3, 0.72);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+/* BRAND */
+.brand {
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.brand:hover {
+  color: #35a7ff;
+}
+
+/* NAVIGATION */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.nav-links a {
+  position: relative;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* underline */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -7px;
+  width: 100%;
+  height: 1px;
+  background: #35a7ff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff;
+}
+
+.nav-links a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* KEYBOARD ACCESSIBILITY */
+.nav-links a:focus-visible,
+.brand:focus-visible {
+  outline: 2px solid #35a7ff;
+  outline-offset: 6px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .site-header {
+    padding: 20px 30px;
+  }
+
+  .nav-links {
+    gap: 20px;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+    letter-spacing: 1.5px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .site-header {
+    padding: 18px 20px;
+  }
+
+  .brand {
+    font-size: 13px;
+  }
+
+  /*
+    Keep only the most important navigation
+    items on small screens.
+  */
+  .nav-links a:nth-child(1),
+  .nav-links a:nth-child(2),
+  .nav-links a:nth-child(4) {
+    display: none;
+  }
+
+  .nav-links {
+    gap: 18px;
+  }
+
+  .nav-links a {
+    font-size: 9px;
+  }
+}

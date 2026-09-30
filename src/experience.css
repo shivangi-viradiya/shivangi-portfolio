@@ -1,0 +1,240 @@
+/* EXPERIENCE */
+.experience-section {
+  position: relative;
+  padding: 120px 6%;
+  background: #030303;
+  color: #ffffff;
+  overflow: hidden;
+}
+
+/* SECTION LABEL */
+.experience-section .section-label {
+  margin: 0 0 20px;
+  color: #35a7ff;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+/* TITLE */
+.experience-title {
+  margin: 0 0 90px;
+  font-size: clamp(50px, 6vw, 90px);
+  line-height: 0.9;
+  font-weight: 700;
+  letter-spacing: -4px;
+}
+
+/* TIMELINE */
+.experience-timeline {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* vertical timeline line */
+.experience-timeline::before {
+  content: "";
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  left: 180px;
+  width: 1px;
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* EXPERIENCE ITEM */
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  padding-bottom: 100px;
+}
+
+.experience-item:last-child {
+  padding-bottom: 0;
+}
+
+/* PERIOD */
+.experience-period {
+  padding-right: 40px;
+  color: rgba(255, 255, 255, 0.45);
+  font-size: 11px;
+  line-height: 1.6;
+  letter-spacing: 2px;
+}
+
+/* TIMELINE DOT */
+.experience-content {
+  position: relative;
+  padding-left: 60px;
+}
+
+.experience-content::before {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -6px;
+  width: 13px;
+  height: 13px;
+  background: #030303;
+  border: 2px solid #35a7ff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 6px rgba(53, 167, 255, 0.08);
+}
+
+/* EXPERIENCE HEADER */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding-bottom: 25px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.experience-header h3 {
+  margin: 0;
+  font-size: clamp(25px, 2.5vw, 36px);
+  font-weight: 500;
+  letter-spacing: -1px;
+}
+
+.experience-header p {
+  margin: 8px 0 0;
+  color: #35a7ff;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.experience-header>span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+/* DESCRIPTION */
+.experience-description {
+  max-width: 800px;
+  margin: 30px 0;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+/* HIGHLIGHTS */
+.experience-highlights {
+  max-width: 850px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.experience-highlights li {
+  position: relative;
+  margin-bottom: 14px;
+  padding-left: 22px;
+  color: rgba(255, 255, 255, 0.55);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.experience-highlights li::before {
+  content: "↳";
+  position: absolute;
+  left: 0;
+  color: #35a7ff;
+}
+
+/* TECHNOLOGIES */
+.experience-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+
+.experience-tech span {
+  padding: 7px 13px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 11px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+}
+
+/* TABLET */
+@media (max-width: 900px) {
+  .experience-section {
+    padding: 100px 5%;
+  }
+
+  .experience-title {
+    margin-bottom: 70px;
+  }
+
+  .experience-timeline::before {
+    left: 130px;
+  }
+
+  .experience-item {
+    grid-template-columns: 130px 1fr;
+  }
+
+  .experience-period {
+    padding-right: 25px;
+  }
+
+  .experience-content {
+    padding-left: 40px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+  .experience-section {
+    padding: 80px 20px;
+  }
+
+  .experience-title {
+    margin-bottom: 60px;
+    font-size: clamp(42px, 12vw, 60px);
+    letter-spacing: -3px;
+  }
+
+  .experience-timeline::before {
+    left: 6px;
+  }
+
+  .experience-item {
+    display: block;
+    padding-left: 35px;
+    padding-bottom: 75px;
+  }
+
+  .experience-period {
+    margin-bottom: 18px;
+    padding: 0;
+  }
+
+  .experience-content {
+    padding-left: 0;
+  }
+
+  .experience-content::before {
+    left: -35px;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .experience-header>span {
+    white-space: normal;
+  }
+
+  .experience-description {
+    font-size: 14px;
+  }
+}
